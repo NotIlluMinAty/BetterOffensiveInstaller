@@ -7,3 +7,9 @@ Lightweight Windows installer for Better Offensive.
 - Run the tool
 - Select your game's installation directory and click install
 - Launch the game from Steam.
+
+## Building
+Requirements:
+- .NET 8 SDK
+
+`dotnet publish -c Release -r win-x64`
