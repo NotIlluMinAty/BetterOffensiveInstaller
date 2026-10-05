@@ -9,8 +9,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AssemblyTitle>Better Offensive Installer</AssemblyTitle>
     <Product>Better Offensive Installer</Product>
-    <Company>Global Retake</Company>
-    <Copyright>Copyright (c) Global Retake</Copyright>
+    <Company>Better Offensive</Company>
+    <Copyright>Copyright (c) Better Offensive</Copyright>
     <Version>1.2.0</Version>
     <FileVersion>1.2.0</FileVersion>
     <UseWindowsForms>true</UseWindowsForms>
