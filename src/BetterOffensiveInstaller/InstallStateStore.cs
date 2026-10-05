@@ -3,7 +3,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 
-namespace GRModInstaller;
+namespace BetterOffensiveInstaller;
 
 internal sealed record InstallState(
     string? ReleaseTag,
@@ -18,7 +18,7 @@ internal sealed record BackedUpFile(string OriginalRelativePath, string BackupRe
 internal static class InstallStateStore
 {
     private const string StateFileName = ".grmod-installer-state.json";
-    private const string RegistryRootPath = @"Software\GlobalRetakeInstaller\InstallState";
+    private const string RegistryRootPath = @"Software\BetterOffensiveInstaller\InstallState";
     private const string StateValueName = "StateJson";
 
     private static readonly JsonSerializerOptions SerializerOptions = new()

@@ -4,13 +4,13 @@
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <AssemblyName>GlobalRetakeInstaller</AssemblyName>
-    <RootNamespace>GRModInstaller</RootNamespace>
+    <AssemblyName>BetterOffensiveInstaller</AssemblyName>
+    <RootNamespace>BetterOffensiveInstaller</RootNamespace>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <AssemblyTitle>Global Retake Installer</AssemblyTitle>
-    <Product>Global Retake Installer</Product>
-    <Company>Global Retake</Company>
-    <Copyright>Copyright Global Retake, globalretake.com</Copyright>
+    <AssemblyTitle>Better Offensive Installer</AssemblyTitle>
+    <Product>Better Offensive Installer</Product>
+    <Company>Global Retakee</Company>
+    <Copyright>Copyright Global Retake</Copyright>
     <Version>1.1.8</Version>
     <FileVersion>1.1.8</FileVersion>
     <UseWindowsForms>true</UseWindowsForms>

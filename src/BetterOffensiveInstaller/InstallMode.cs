@@ -1,4 +1,4 @@
-namespace GRModInstaller;
+namespace BetterOffensiveInstaller;
 
 public enum InstallMode
 {

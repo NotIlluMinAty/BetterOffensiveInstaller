@@ -4,12 +4,12 @@ using System.IO.Compression;
 using System.Net.Http;
 using System.Windows.Forms;
 
-namespace GRModInstaller;
+namespace BetterOffensiveInstaller;
 
 public sealed class MainForm : Form
 {
     private const string DefaultInstallPath = @"C:\Program Files (x86)\Steam\steamapps\common\csgo legacy";
-    private static readonly string InstallerTempBasePath = Path.Combine(Path.GetTempPath(), "GlobalRetakeInstaller");
+    private static readonly string InstallerTempBasePath = Path.Combine(Path.GetTempPath(), "BetterOffensiveInstaller");
 
     private readonly HttpClient _httpClient = CreateHttpClient();
     private readonly ReleaseService _releaseService;
@@ -1131,7 +1131,7 @@ public sealed class MainForm : Form
     private static HttpClient CreateHttpClient()
     {
         var client = new HttpClient();
-        client.DefaultRequestHeaders.UserAgent.ParseAdd("GlobalRetakeInstaller/1.0");
+        client.DefaultRequestHeaders.UserAgent.ParseAdd("BetterOffensiveInstaller/1.0");
         return client;
     }
 

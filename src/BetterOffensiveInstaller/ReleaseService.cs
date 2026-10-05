@@ -2,8 +2,10 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Linq;
+using System.Collections.Generic;
 
-namespace GRModInstaller;
+namespace BetterOffensiveInstaller;
 
 public sealed class ReleaseService
 {
@@ -21,7 +23,7 @@ public sealed class ReleaseService
 
     public async Task<ReleaseInfo> GetLatestReleaseAsync(CancellationToken cancellationToken = default)
     {
-        using var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/repos/itsIlluMinAty/GRModInstallFiles/releases/tags/continuous");
+        using var request = new HttpRequestMessage(HttpMethod.Get, "https://api.github.com/repos/NotIlluMinAty/BetterOffensive-Releases/releases/latest");
         request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue("application/vnd.github+json"));
 
         using var response = await _httpClient.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, cancellationToken);
@@ -31,8 +33,8 @@ public sealed class ReleaseService
         var release = await JsonSerializer.DeserializeAsync<GitHubReleaseDto>(stream, SerializerOptions, cancellationToken)
             ?? throw new InstallerAppException(InstallerErrorKind.GitHubEmptyPayload);
 
-        var fullAsset = GetWindowsAsset(release.Assets, "_Full-windows-latest");
-        var patchAsset = GetWindowsAsset(release.Assets, "_Patch-windows-latest");
+        var fullAsset = GetWindowsAsset(release.Assets, "-windows");
+        var patchAsset = GetWindowsAsset(release.Assets, "-windows");
 
         if (fullAsset is null || patchAsset is null)
         {
@@ -69,7 +71,7 @@ public sealed class ReleaseService
         public DateTimeOffset PublishedAt { get; init; }
 
         [JsonPropertyName("assets")]
-        public List<GitHubAssetDto> Assets { get; init; } = [];
+        public List<GitHubAssetDto> Assets { get; init; } = new();
     }
 
     private sealed class GitHubAssetDto

@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Text;
 
-namespace GRModInstaller;
+namespace BetterOffensiveInstaller;
 
 internal sealed record ManagedExclusion(string Path, bool AddedByInstaller);
 

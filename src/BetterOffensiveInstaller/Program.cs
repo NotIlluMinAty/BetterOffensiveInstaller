@@ -1,6 +1,6 @@
 using System.Windows.Forms;
 
-namespace GRModInstaller;
+namespace BetterOffensiveInstaller;
 
 internal static class Program
 {
