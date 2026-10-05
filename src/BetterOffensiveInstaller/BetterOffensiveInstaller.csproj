@@ -10,9 +10,9 @@
     <AssemblyTitle>Better Offensive Installer</AssemblyTitle>
     <Product>Better Offensive Installer</Product>
     <Company>Global Retake</Company>
-    <Copyright>Copyright Global Retake</Copyright>
-    <Version>1.1.9</Version>
-    <FileVersion>1.1.9</FileVersion>
+    <Copyright>Copyright (c) Global Retake</Copyright>
+    <Version>1.2.0</Version>
+    <FileVersion>1.2.0</FileVersion>
     <UseWindowsForms>true</UseWindowsForms>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
